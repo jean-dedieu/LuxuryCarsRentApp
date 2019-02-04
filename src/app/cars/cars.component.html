@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-md-4" *ngFor="let carLoop of cars">
+    <app-car
+      [car]="carLoop"
+      (carEmitter)="navigateToDetail($event)"
+    ></app-car>
+  </div>
+</div>
+

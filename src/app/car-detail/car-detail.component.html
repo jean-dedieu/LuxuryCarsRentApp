@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1>{{ car.model.name}}</h1>
+    <h2>{{ car.model.brand}}</h2>
+  </div>
+</div>
+<div class="row" *ngFor="let rent of car.rents">
+  <div class="col-md-4">
+    Client : {{ rent.client.lastname}}{{ rent.client.name}}
+  </div>
+  <div class="col-md-4">
+    Date de début : {{rent.beginning | date: 'shortDate'}}
+  </div>
+  <div class="col-md-4">
+    Date de fin : {{rent.end | date: 'shortDate'}}
+  </div>
+</div>

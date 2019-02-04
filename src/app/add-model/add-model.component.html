@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-12">
+    <form class="form-group" (submit)="save()">
+      <label>Name of the model</label>
+      <input type="text"
+             [(ngModel)]="name"
+             class="form-control"
+             name="name"
+             placeholder="Name of the model">
+      <label>Name of the brand</label>
+      <input type="text"
+             [(ngModel)]="brand"
+             class="form-control"
+             name="brand"
+             placeholder="Name of the brand">
+      <button class="btn btn-success">Save !</button>
+    </form>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12" *ngFor="let m of modelService.getAll()">
+    {{m.id}} {{ m.name }} {{ m.brand }}
+  </div>
+</div>

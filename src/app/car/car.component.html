@@ -1,0 +1,14 @@
+<div class="card" style="margin: 10px;">
+  <div class="card-img-top"
+       [style.backgroundColor]="car.color"
+       style="height: 100px;"
+  ></div>
+  <div class="card-body">
+    <h5 class="card-title">Immatriculation : {{ car.registration }}</h5>
+    <p class="card-text">
+      Le modèle de cette voiture est {{ car.model.name }},
+      de la marque {{ car.model.brand}}
+    </p>
+    <a (click)="emitCar()" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
